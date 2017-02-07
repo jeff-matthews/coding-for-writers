@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+  <body>
+    <p><input type = "text" id="textbox1"></p>
+    <p><input type = "text" id="textbox2"></p>
+    <button onclick="login()">Login</button>
+    <button onclick="compare()">Compare</button>
+    <button onclick="showDirection()">Direction</button>
+    <p id="result"></p>
+  <script>
+    function login()  {
+      if (textbox1.value == "admin" && textbox2.value == "pass") {
+        result.innerHTML = "Logged in";
+      }   else {
+            result.innerHTML = "Incorrect username and password";
+      }
+    }
+    function compare() {
+      if (textbox1.value.length > textbox2.value.length)
+        result.innerHTML = "First is longer";
+      else if (textbox2.value.length > textbox1.value.length)
+        result.innerHTML = "Second is longer";
+      else (textbox1.value.length = textbox2.value.length)
+        result.innerHTML = "Same length";
+      }
+      function directionName(abbrev) {
+        switch (abbrev) {
+          case "n":
+            return "North";
+            break;
+          case "s":
+            return "South";
+            break;
+          case "e":
+            return "East";
+            break;
+          case "w":
+            return "West";
+            break;
+          default:
+            return "Somewhere";
+        }
+      }
+      function showDirection() {
+        result.innerHTML = "Go " + directionName(textbox1.value);
+      }
+  </script>
+  </body>
+</html>

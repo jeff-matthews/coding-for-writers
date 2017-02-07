@@ -1,2 +1,3 @@
-# coding-for-writers
-JS and HTML exercises related to Udemy Coding for Writers course
+# README
+
+This repo contains examples of JS exercises I did while taking the Udemy Coding for Writers course.

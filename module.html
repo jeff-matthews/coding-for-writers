@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+<body onload="drawChart()">
+  <canvas id="canvas1" width="300" height="300">
+ Your web-browser does not support the HTML 5 canvas element.</canvas
+<script type="application/javascript" src="awesomechart.js"></script>
+<script>
+  function drawChart() {
+    if(!!document.createElement('canvas').getContext){ //check that the canvas
+ // element is supported
+ var mychart = new AwesomeChart('canvas1');
+ mychart.title = "Product Sales - 2010";
+ mychart.data = [1532, 3251, 3460, 1180, 6543];
+ mychart.labels = ["Desktops", "Laptops", "Netbooks", "Tablets", "Smartphones"];
+ mychart.draw();
+ }
+}
+</script>
+</body>
+</html>

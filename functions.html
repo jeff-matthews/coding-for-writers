@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+  <body>
+    <p>Number 1: <input type="text" id="num1"></p>
+    <p>Number 2: <input type="text" id="num2"></p>
+    <button onclick="displayResult()">Show Result</button>
+    <p id="resultPar"></p>
+  </body>
+  <script>
+    function displayResult() {
+      setWidth(num1, Number(num1.value));
+      var result = average(Number(num1.value), Number(num2.value));
+      result++;
+      resultPar.innerHTML = "Result: " + result;
+    }
+    function setWidth(textBox, numChar) {
+      textBox.size = numChar;
+    }
+    function average(x, y) {
+      return (x + y) / 2;
+    }
+  </script>
+</html>
